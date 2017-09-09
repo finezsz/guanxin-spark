@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<!--执行命令 mvn mybatis-generator:generate -->
+	<properties resource="config-${guanxin.spark.env}.properties" />
+	<classPathEntry location="D:\360disk\mybak\mybatis-generator-core-1.3.2\lib\mybatis-generator-core-1.3.2.jar" />
+	<context id="DB2Tables" targetRuntime="MyBatis3" defaultModelType="flat">
+		<!-- 
+		<plugin type="org.mybatis.generator.plugins.MapperConfigPlugin">
+			<property name="fileName" value="MapperConfig.xml" />
+			<property name="targetPackage" value="/" />
+			<property name="targetProject" value="src/main/resources" />
+		</plugin>
+		 -->
+		<!-- <plugin type="org.mybatis.generator.plugins.SqlMapConfigPlugin"> <property name="fileName" value="SqlMapConfig.xml" /> <property name="targetPackage" 
+			value="/" /> <property name="targetProject" value="src/main/resources" /> </plugin> -->
+		<plugin type="org.mybatis.generator.plugins.RenameExampleClassPlugin">
+			<property name="searchString" value="Example$" />
+			<property name="replaceString" value="Criteria" />
+		</plugin>
+		<plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
+		<commentGenerator>
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+		<jdbcConnection driverClass="${guanxin.spark.driverClassName}" connectionURL="${guanxin.spark.url}" userId="${guanxin.spark.username}" password="${guanxin.spark.password}">
+		</jdbcConnection>
+		<javaModelGenerator targetPackage="com.guanxin.spark.entity" targetProject="${mybatis.generator.outputDirectory}">
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+		<sqlMapGenerator targetPackage="com.guanxin.spark.sqlmap" targetProject="${mybatis.generator.outputDirectory}">
+	
+		</sqlMapGenerator>
+		<!-- <javaClientGenerator targetPackage="com.guanxin.spark.mapper" type="XMLMAPPER" targetProject="${mybatis.generator.outputDirectory}"> </javaClientGenerator> -->
+		<!-- 已经生成过的表不要配置在这里，否则sqlmap文件会被合并覆盖，表要指定主键，不然生成的sqlmap文件不完整 -->
+		<table tableName="privacy" domainObjectName="Privacy"   selectByExampleQueryId="false" enableUpdateByExample="false" enableCountByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false" enableInsert="true"
+		></table> 
+	</context>
+</generatorConfiguration>
