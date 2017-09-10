@@ -32,4 +32,10 @@ git push origin :branch-name
 $git push origin test:master     
     
 10 提交本地test分支作为远程的test分支
-$git push origin test:test              
+$git push origin test:test           
+
+11 提交到本地
+git  commit -m  “日志”   
+
+12 提交到远程
+git  push
