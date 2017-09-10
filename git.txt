@@ -39,3 +39,24 @@ git  commit -m  “日志”
 
 13 提交到远程
 git  push
+
+14 列出tag
+$ git tag # 在控制台打印出当前仓库的所有tag
+
+15 创建轻量Tag
+$ git tag mytag
+
+16 切换到Tag
+git checkout [tagname]
+
+17 删除Tag
+$ git tag -d mytag
+
+18 给指定的commit打Tag
+$ git tag -a mytag 9fbc3d0
+
+19 Tag推送到服务器 
+$ git push origin v0.1.2 # 将v0.1.2 Tag提交到git服务器
+$ git push origin --tags # 将本地所有Tag一次性提交到git服务器
+
+20 
