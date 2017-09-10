@@ -27,3 +27,9 @@ git push origin :br-1.0.0
 
 8 删除远程分支  
 git push origin :branch-name  
+
+9 提交本地test分支作为远程的master分支
+$git push origin test:master     
+    
+10 提交本地test分支作为远程的test分支
+$git push origin test:test              
