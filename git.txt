@@ -65,3 +65,7 @@ $ git merge hotfix
 
 21 克隆指定分支到本地
 git clone -b feature_2017737 https://github.com/finezsz/guanxin-spark
+
+22 从远程获取最新版本到本地，不会自动merge
+git fetch
+
