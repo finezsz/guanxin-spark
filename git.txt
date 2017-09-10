@@ -57,8 +57,11 @@ $ git tag -a mytag 9fbc3d0
 
 19 Tag推送到服务器 
 $ git push origin v0.1.2 # 将v0.1.2 Tag提交到git服务器
-$ git push origin --tags # 将本地所有Tag一次性提交到git服务器
+$ git push origin --tags #将本地所有Tag一次性提交到git服务器
 
 20 将hotfix分支合并到master
 $ git checkout master
 $ git merge hotfix
+
+21 克隆指定分支到本地
+git clone -b feature_2017737 https://github.com/finezsz/guanxin-spark
