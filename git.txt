@@ -72,7 +72,7 @@ git fetch
 23 比较两个版本号码的src 文件夹的差异
 git diff 版本号码1 版本号码2  src  
 查看两个版本某个文件的差别
-git diff ffd98b291e0caa6c33575c1ef465eae661ce40c9:filename b8e7b00c02b95b320f14b625663fdecf2d63e74c:filename
+git diff ffd98b291e0caa6c33575c1ef465eae66:filename b8e7b00c02b95b320f14b625663fdecf2d63e74c:filename
 
 
 
