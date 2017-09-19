@@ -75,5 +75,10 @@ git diff 版本号码1 版本号码2  src
 git diff ffd98b291e0caa6c33575c1ef465eae661ce409:filename b8e7b00c02b95b320f14b625663fdecf2d63e74c:filename
 
 
+24 删除已入仓库的文件夹
+git rm -r --cached .idea/
+
+25 忽略已跟踪的文件
+git update-index --assume-unchanged filename
 
 
